@@ -17,11 +17,11 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class BBC1Task1 {
     List<String> actual = Arrays.asList(
-            "US urges Putin to take peaceful path on Ukraine",
-            "'World's most valuable house' - which no one wanted to buy",
-            "Former Vogue creative director Talley dies aged 73",
-            "Britney issues cease and desist letter to sister",
-            "Militant jailed for masterminding Bali bombings");
+            "Emergency diplomacy offers few results for Ukraine",
+            "Scores killed in Yemen prison air strike carnage",
+            "Stars pay tribute to 'one-off talent' Meat Loaf",
+            "Tearful Adele postpones entire Las Vegas residency",
+            "Tonga's volcanic plume reached half-way to space");
 
     private WebDriver driver;
 
@@ -54,7 +54,7 @@ public class BBC1Task1 {
             driver.findElement(By.xpath("//button[contains(@class,'tp-close tp-active')]")).click();
         }
         String headlineArticleExpected = driver.findElement(By.xpath("//div[contains(@class,'gs-c-promo-body gs-u-display-none gs-u-display-inline-block@m gs-u-mt@xs gs-u-mt0@m gel-1/3@m')]//a[contains(@class,'gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-paragon-bold nw-o-link-split__anchor')]")).getText();
-        assertEquals(headlineArticleExpected, "Tonga undersea cable may take four weeks to repair");
+        assertEquals(headlineArticleExpected, "US and Russia hold 'frank' talks on Ukraine tension");
     }
 
     /**
@@ -106,7 +106,7 @@ public class BBC1Task1 {
             driver.findElement(By.xpath("//button[contains(@class,'tp-close tp-active')]")).click();
         }
         WebElement headlineArticleExpected = driver.findElement(By.xpath("//div[contains(@class,'gs-c-promo-body gs-u-mt@xxs gs-u-mt@m gs-c-promo-body--primary gs-u-mt@xs gs-u-mt@s gs-u-mt@m gs-u-mt@xl gel-1/3@m gel-1/2@xl gel-1/1@xxl')]//a[contains(@class,'gs-c-promo-heading gs-o-faux-block-link__overlay-link gel-paragon-bold gs-u-mt+ nw-o-link-split__anchor')]//h3[@class='gs-c-promo-heading__title gel-paragon-bold gs-u-mt+ nw-o-link-split__text']"));
-        assertEquals(headlineArticleExpected.getText(), "Tonga undersea cable may take four weeks to repair");
+        assertEquals(headlineArticleExpected.getText(), "Mid-flight fake bomb plot ends in air piracy charge");
     }
 
     @AfterMethod
